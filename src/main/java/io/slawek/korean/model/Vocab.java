@@ -1,31 +1,31 @@
 package io.slawek.korean.model;
 
-import jakarta.persistence.*;
-
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 
 @Entity
 @Table(name = "vocabs")
 public class Vocab {
 
-    @Id
+        @Id
         @Column(name = "id", nullable = false)
         @GeneratedValue
         private Long id;
 
-//        @NotBlank(message = "New Vocabulary must not be blank")
+        @NotBlank(message = "New Vocabulary must not be blank")
         @Column(name = "Japanese", nullable = false)
         private String japanese;
 
-//        @NotBlank(message = "New Vocabulary must not be blank")
+        @NotBlank(message = "New Vocabulary must not be blank")
         @Column(name = "Korean", nullable = false)
         private String korean;
 
-//        @NotBlank(message = "New Vocabulary must not be blank")
+        @NotBlank(message = "New Vocabulary must not be blank")
         @Column(name = "English", nullable = false)
         private String english;
 
-//        @NotBlank(message = "New Vocabulary must not be blank")
+        @NotBlank(message = "New Vocabulary must not be blank")
         @Column(name = "Polish", nullable = false)
         private String polish;
 
