@@ -81,7 +81,7 @@ public class VocabController {
         @PostMapping("/new")
         public String create(Vocab newVocab, Model model) throws ChangeSetPersister.NotFoundException {
             newVocab = vocabService.createVocab(newVocab);
-            return "redirect:/vocab/list";
+            return "redirect:/list";
 
         }
 
